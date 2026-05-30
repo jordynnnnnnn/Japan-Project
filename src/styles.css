@@ -1,11 +1,21 @@
+:root {
+  --main-color: #442020;
+  --main-background-color: rgba(255, 88, 69);
+  --secondary-background-color: #ffecec;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgba(255, 88, 69);
+  background-color: var(--main-background-color);
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .grid {
@@ -15,20 +25,60 @@ body {
 
 .img-responsive {
   max-width: 100%;
+  display: block;
 }
 
 .grid-2-columns {
   grid-template-columns: 1fr 1fr;
 }
 
+.grid-3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .grid-3-columns-first-narrow {
   grid-template-columns: 1fr 2fr 2fr;
 }
 
+.card {
+  background: white;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  padding: 30px;
+  flex: 1;
+}
+
+.card-footer {
+  padding: 0 30px 30px;
+}
+
+.btn {
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px;
+  text-decoration: none;
+  background-color: var(--main-background-color);
+}
+
 section {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px;
+}
+
+section.secondary {
+  background: var(--secondary-background-color);
 }
 
 header {
@@ -69,7 +119,7 @@ header a {
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  color: #272044;
+  color: var(--main-color);
   padding: 16px 32px;
   margin-top: 32px;
   display: inline-block;
@@ -88,7 +138,7 @@ main h2 {
   font-size: 16px;
   line-height: 1.5px;
   letter-spacing: 5px;
-  color: #442020;
+  color: var(--main-color);
   opacity: 0.3;
   text-transform: uppercase;
 }
@@ -97,8 +147,24 @@ main h3 {
   font-weight: 700;
   font-size: 40px;
   line-height: 1.5;
-  color: #442020;
+  color: var(--main-color);
   margin: 0;
+}
+
+main h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 20px;
+  color: var(--main-color);
+  margin-top: 0;
+}
+
+main h5 {
+  font-weight: 700;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5px;
+  color: var(--main-color);
 }
 
 main p {
@@ -106,7 +172,7 @@ main p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #442020;
+  color: var(--main-color);
   opacity: 0.7;
 }
 
