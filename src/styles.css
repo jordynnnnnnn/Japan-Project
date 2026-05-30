@@ -28,6 +28,12 @@ body {
   display: block;
 }
 
+.gallery-img-responsive {
+  width: 100%;
+  object-fit: cover;
+  grid-gap: 1px;
+}
+
 .grid-2-columns {
   grid-template-columns: 1fr 1fr;
 }
@@ -43,6 +49,10 @@ body {
 .embed {
   width: 100%;
   aspect-ratio: 1 / 1.1;
+}
+
+.instagram-embed {
+  margin: 30px auto;
 }
 
 .card {
